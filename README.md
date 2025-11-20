@@ -52,9 +52,9 @@ While the server is running, open a new terminal window and connect to it using 
 ```bash
 # Connect using netcat (nc)
 nc 127.0.0.1 8585
-```
+
 # OR, connect using telnet
 telnet 127.0.0.1 8585
-
+```
 
 Upon connection, the client will receive the **"Welcome to Server"** message, and any text you type and send will be received and printed by the server process.
