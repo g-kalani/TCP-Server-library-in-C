@@ -26,3 +26,35 @@ The project includes a `Makefile` to simplify the compilation process.
 
 ```bash
 make
+```
+This command will:
+ 1. Compile `tcpserver.c` into `tcpserver.o`.
+ 2. Link the object file to create the final executable, `tcpserver`.
+
+### Running the Server
+
+Execute the compiled server program from your terminal. By default, the `main()` function is configured to run the server on **port 8585** .
+
+```bash
+./tcpserver
+```
+
+You should see the output:
+
+```bash
+Listening to port 8585
+```
+
+### Testing the Connection
+
+While the server is running, open a new terminal window and connect to it using a client like `telnet` or `nc` (netcat):
+
+```bash
+# Connect using netcat (nc)
+nc 127.0.0.1 8585
+```
+# OR, connect using telnet
+telnet 127.0.0.1 8585
+
+
+Upon connection, the client will receive the **"Welcome to Server"** message, and any text you type and send will be received and printed by the server process.
